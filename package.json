@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "env NODE_ENV=development webpack-dev-server",
+    "dev": "env NODE_ENV=development node ./bin/dev.js",
     "build:dev": "env NODE_ENV=development webpack --config webpack.config.js",
     "build:prod": "env NODE_ENV=production webpack --config webpack.config.js",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -12,12 +12,17 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@hot-loader/react-dom": "^17.0.2",
+    "clean-webpack-plugin": "^4.0.0",
     "html-webpack-plugin": "^5.6.0",
+    "react-hot-loader": "^4.13.1",
     "ts-loader": "^9.5.1",
     "typescript": "^5.3.3",
     "webpack": "^5.89.0",
     "webpack-cli": "^5.1.4",
+    "webpack-dev-middleware": "^7.0.0",
     "webpack-dev-server": "^4.15.1",
+    "webpack-hot-middleware": "^2.26.0",
     "webpack-node-externals": "^3.0.0"
   },
   "dependencies": {
